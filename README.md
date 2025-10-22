@@ -1,6 +1,6 @@
 # 🧠 Juego de Memoria (Parejas de Cartas) — C# WinForms + Supabase
 
-![Logo](https://i.imgur.com/a31tZ1U.png)
+<img width="1024" height="1024" alt="image" src="https://github.com/user-attachments/assets/4b7df149-8090-4913-86ba-e303c4ff2cb8" />
 
 ## 🎯 Descripción
 
