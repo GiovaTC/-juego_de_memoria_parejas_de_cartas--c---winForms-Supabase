@@ -104,5 +104,14 @@ namespace MemoryGame_Supabase
             TimeSpan tiempo = DateTime.Now - startTime;
             lblTiempo.Text = $"Tiempo: {tiempo.Minutes:D2}:{tiempo.Seconds:D2}";
         }
+
+        private async void btnGuardarPuntaje_Click(object sender, EventArgs e)
+        {
+            string jugador = txtJugador.Text;
+            string tiempo = lblTiempo.Text.Replace("Tiempo: ", "");
+            var supabase = new SupabaseService();
+            await supabase.GuardarResultado(jugador, intentos, tiempo);
+            MessageBox.Show("Puntaje guardado en Supabase ✅");
+        }
     }
 }

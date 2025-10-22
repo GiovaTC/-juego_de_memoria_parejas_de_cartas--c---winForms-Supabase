@@ -1,0 +1,7 @@
+C:\Users\USUARIO\source\repos\MemoryGame_Supabase\MemoryGame_Supabase\obj\Debug\net8.0-windows\MemoryGame_Supabase.Form1.resources
+C:\Users\USUARIO\source\repos\MemoryGame_Supabase\MemoryGame_Supabase\obj\Debug\net8.0-windows\MemoryGame_Supabase.csproj.GenerateResource.cache
+C:\Users\USUARIO\source\repos\MemoryGame_Supabase\MemoryGame_Supabase\obj\Debug\net8.0-windows\MemoryGame_Supabase.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\USUARIO\source\repos\MemoryGame_Supabase\MemoryGame_Supabase\obj\Debug\net8.0-windows\MemoryGame_Supabase.AssemblyInfoInputs.cache
+C:\Users\USUARIO\source\repos\MemoryGame_Supabase\MemoryGame_Supabase\obj\Debug\net8.0-windows\MemoryGame_Supabase.AssemblyInfo.cs
+C:\Users\USUARIO\source\repos\MemoryGame_Supabase\MemoryGame_Supabase\obj\Debug\net8.0-windows\MemoryGame_Supabase.csproj.CoreCompileInputs.cache
+C:\Users\USUARIO\source\repos\MemoryGame_Supabase\MemoryGame_Supabase\obj\Debug\net8.0-windows\MemoryGame_Supabase.sourcelink.json
