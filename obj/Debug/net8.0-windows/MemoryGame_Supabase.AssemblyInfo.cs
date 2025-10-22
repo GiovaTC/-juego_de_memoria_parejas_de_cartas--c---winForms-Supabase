@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MemoryGame_Supabase")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b3c48a006d3be4edf5e9e955177c6b2124d0746c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+54c866028db1d4d2fdf8a82732cd74d4eb7d4539")]
 [assembly: System.Reflection.AssemblyProductAttribute("MemoryGame_Supabase")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MemoryGame_Supabase")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
