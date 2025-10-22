@@ -95,7 +95,7 @@ namespace MemoryGame_Supabase
             if (todosEncontrados)
             {
                 gameTimer.Stop();
-               MessageBox.Show("¡Has completado el juego!");
+                MessageBox.Show("¡Has completado el juego!");
             }
         }
 
@@ -112,6 +112,18 @@ namespace MemoryGame_Supabase
             var supabase = new SupabaseService();
             await supabase.GuardarResultado(jugador, intentos, tiempo);
             MessageBox.Show("Puntaje guardado en Supabase ✅");
+        }
+
+        private void btnVerResultados_Click(object sender, EventArgs e)
+        {
+            // 🔹 Abre la ventana con los resultados desde Supabase
+            FormResultados formResultados = new FormResultados();
+            formResultados.ShowDialog();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
