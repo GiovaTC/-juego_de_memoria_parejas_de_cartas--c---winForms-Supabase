@@ -86,9 +86,23 @@ namespace MemoryGame_Supabase
             }
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void VerificarGanador()
         {
+            bool todosEncontrados = Controls.OfType<Button>()
+                .Where(b => b.Name.StartsWith("btnCard"))
+                .All(b => !b.Enabled);
 
+            if (todosEncontrados)
+            {
+                gameTimer.Stop();
+               MessageBox.Show("¡Has completado el juego!");
+            }
+        }
+
+        private void GameTimer_Tick(object sender, EventArgs e)
+        {
+            TimeSpan tiempo = DateTime.Now - startTime;
+            lblTiempo.Text = $"Tiempo: {tiempo.Minutes:D2}:{tiempo.Seconds:D2}";
         }
     }
 }
