@@ -1,18 +1,20 @@
-﻿namespace MemoryGame_Supabase
+﻿using Timer = System.Windows.Forms.Timer;
+
+namespace MemoryGame_Supabase
 {
     partial class Form1
     {
         private System.ComponentModel.IContainer components = null;
 
-        // 🔹 Declaración de controles
-        private Label lblIntentos;
-        private Label lblTiempo;
         private Label lblJugador;
         private TextBox txtJugador;
-        private Button btnGuardarPuntaje;
+        private Label lblTiempo;
+        private Label lblIntentos;
+        private Button btnGuardar;
         private Button btnReiniciar;
-        private DataGridView dataGridView1;
         private Button btnVerResultados;
+        private System.Windows.Forms.Timer timer1;
+        private TableLayoutPanel tablaCartas;
 
         protected override void Dispose(bool disposing)
         {
@@ -23,119 +25,91 @@
             base.Dispose(disposing);
         }
 
-        #region Windows Form Designer generated code
         private void InitializeComponent()
         {
-            lblIntentos = new Label();
-            lblTiempo = new Label();
-            lblJugador = new Label();
-            txtJugador = new TextBox();
-            btnGuardarPuntaje = new Button();
-            btnReiniciar = new Button();
-            dataGridView1 = new DataGridView();
-            btnVerResultados = new Button();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            this.lblJugador = new Label();
+            this.txtJugador = new TextBox();
+            this.lblTiempo = new Label();
+            this.lblIntentos = new Label();
+            this.btnGuardar = new Button();
+            this.btnReiniciar = new Button();
+            this.btnVerResultados = new Button();
+            this.timer1 = new Timer();
+            this.tablaCartas = new TableLayoutPanel();
+
             SuspendLayout();
-            // 
-            // lblIntentos
-            // 
-            lblIntentos.AutoSize = true;
-            lblIntentos.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
-            lblIntentos.Location = new Point(20, 20);
-            lblIntentos.Name = "lblIntentos";
-            lblIntentos.Size = new Size(78, 19);
-            lblIntentos.TabIndex = 1;
-            lblIntentos.Text = "Intentos: 0";
-            // 
-            // lblTiempo
-            // 
-            lblTiempo.AutoSize = true;
-            lblTiempo.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
-            lblTiempo.Location = new Point(20, 50);
-            lblTiempo.Name = "lblTiempo";
-            lblTiempo.Size = new Size(82, 19);
-            lblTiempo.TabIndex = 2;
-            lblTiempo.Text = "Tiempo: 0s";
-            // 
+
             // lblJugador
-            // 
-            lblJugador.AutoSize = true;
-            lblJugador.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
-            lblJugador.Location = new Point(20, 85);
-            lblJugador.Name = "lblJugador";
-            lblJugador.Size = new Size(69, 19);
-            lblJugador.TabIndex = 3;
-            lblJugador.Text = "Jugador:";
-            // 
+            this.lblJugador.Text = "Jugador:";
+            this.lblJugador.Location = new Point(20, 20);
+            this.lblJugador.AutoSize = true;
+
             // txtJugador
-            // 
-            txtJugador.Location = new Point(100, 83);
-            txtJugador.Name = "txtJugador";
-            txtJugador.Size = new Size(150, 23);
-            txtJugador.TabIndex = 4;
-            // 
-            // btnGuardarPuntaje
-            // 
-            btnGuardarPuntaje.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            btnGuardarPuntaje.Location = new Point(20, 120);
-            btnGuardarPuntaje.Name = "btnGuardarPuntaje";
-            btnGuardarPuntaje.Size = new Size(230, 30);
-            btnGuardarPuntaje.TabIndex = 5;
-            btnGuardarPuntaje.Text = "Guardar Puntaje en Supabase";
-            btnGuardarPuntaje.UseVisualStyleBackColor = true;
-            btnGuardarPuntaje.Click += btnGuardarPuntaje_Click;
-            // 
+            this.txtJugador.Location = new Point(85, 18);
+            this.txtJugador.Width = 120;
+
+            // lblTiempo
+            this.lblTiempo.Text = "Tiempo: 00:00";
+            this.lblTiempo.Location = new Point(230, 20);
+            this.lblTiempo.AutoSize = true;
+
+            // lblIntentos
+            this.lblIntentos.Text = "Intentos: 0";
+            this.lblIntentos.Location = new Point(360, 20);
+            this.lblIntentos.AutoSize = true;
+
+            // tablaCartas
+            this.tablaCartas.Location = new Point(20, 60);
+            this.tablaCartas.Size = new Size(400, 300);
+            this.tablaCartas.ColumnCount = 4;
+            this.tablaCartas.RowCount = 4;
+            this.tablaCartas.CellBorderStyle = TableLayoutPanelCellBorderStyle.OutsetDouble;
+            this.tablaCartas.BackColor = Color.White;
+            for (int i = 0; i < 4; i++)
+            {
+                this.tablaCartas.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
+                this.tablaCartas.RowStyles.Add(new RowStyle(SizeType.Percent, 25F));
+            }
+
+            // btnGuardar
+            this.btnGuardar.Text = "Guardar Puntaje";
+            this.btnGuardar.Location = new Point(20, 380);
+            this.btnGuardar.Size = new Size(120, 30);
+            this.btnGuardar.Click += new EventHandler(this.btnGuardar_Click);
+
             // btnReiniciar
-            // 
-            btnReiniciar.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            btnReiniciar.Location = new Point(20, 160);
-            btnReiniciar.Name = "btnReiniciar";
-            btnReiniciar.Size = new Size(230, 30);
-            btnReiniciar.TabIndex = 6;
-            btnReiniciar.Text = "Reiniciar Juego";
-            btnReiniciar.UseVisualStyleBackColor = true;
-            // 
-            // dataGridView1
-            // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(280, 20);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.ReadOnly = true;
-            dataGridView1.RowHeadersVisible = false;
-            dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dataGridView1.Size = new Size(480, 170);
-            dataGridView1.TabIndex = 7;
-            // 
+            this.btnReiniciar.Text = "Reiniciar";
+            this.btnReiniciar.Location = new Point(160, 380);
+            this.btnReiniciar.Size = new Size(100, 30);
+            this.btnReiniciar.Click += new EventHandler(this.btnReiniciar_Click);
+
             // btnVerResultados
-            // 
-            btnVerResultados.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            btnVerResultados.Location = new Point(20, 200);
-            btnVerResultados.Name = "btnVerResultados";
-            btnVerResultados.Size = new Size(230, 30);
-            btnVerResultados.TabIndex = 0;
-            btnVerResultados.Text = "Ver Resultados Globales";
-            btnVerResultados.UseVisualStyleBackColor = true;
-            // 
+            this.btnVerResultados.Text = "Ver Resultados";
+            this.btnVerResultados.Location = new Point(280, 380);
+            this.btnVerResultados.Size = new Size(120, 30);
+            this.btnVerResultados.Click += new EventHandler(this.btnVerResultados_Click);
+
+            // timer1
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new EventHandler(this.timer1_Tick);
+
             // Form1
-            // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
-            Controls.Add(btnVerResultados);
-            Controls.Add(lblIntentos);
-            Controls.Add(lblTiempo);
-            Controls.Add(lblJugador);
-            Controls.Add(txtJugador);
-            Controls.Add(btnGuardarPuntaje);
-            Controls.Add(btnReiniciar);
-            Controls.Add(dataGridView1);
-            Name = "Form1";
-            Text = "Juego de Memoria - Supabase";
-            Load += Form1_Load;
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            this.AutoScaleDimensions = new SizeF(7F, 15F);
+            this.AutoScaleMode = AutoScaleMode.Font;
+            this.ClientSize = new Size(460, 430);
+            this.Controls.Add(this.lblJugador);
+            this.Controls.Add(this.txtJugador);
+            this.Controls.Add(this.lblTiempo);
+            this.Controls.Add(this.lblIntentos);
+            this.Controls.Add(this.btnGuardar);
+            this.Controls.Add(this.btnReiniciar);
+            this.Controls.Add(this.btnVerResultados);
+            this.Controls.Add(this.tablaCartas);
+            this.Text = "Juego de Memoria - Supabase";
+            this.Load += new EventHandler(this.Form1_Load);
+
             ResumeLayout(false);
             PerformLayout();
         }
-        #endregion
     }
 }
