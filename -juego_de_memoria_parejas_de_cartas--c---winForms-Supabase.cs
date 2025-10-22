@@ -1,4 +1,4 @@
-🎯 Juego de Memoria (Parejas de Cartas) con C# WinForms + Supabase
+/*🎯 Juego de Memoria (Parejas de Cartas) con C# WinForms + Supabase
 
 Incluye:
 
@@ -328,4 +328,4 @@ Proyecto educativo desarrollado con ❤️ para prácticas de integración .NET 
 
 📄 Licencia
 
-MIT License — Libre para usar y modificar con fines educativos.
+MIT License — Libre para usar y modificar con fines educativos.*/
